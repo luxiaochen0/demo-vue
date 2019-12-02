@@ -13,6 +13,9 @@ export default {
   name: 'home',
   components: {
     HelloWorld
+  },
+  created: function () {
+      window.console.log(process.env)
   }
 }
 </script>
