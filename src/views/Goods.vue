@@ -3,16 +3,19 @@
         <div class="left"><Left></Left></div>
         <div class="right">
             <div class="top"></div>
-            <div class="bottom"></div>
+            <div class="bottom">
+                <Right></Right>
+            </div>
         </div>
     </div>
 </template>
 
 <script>
     import Left from '../components/Left.vue'
+    import Right from '../components/Right.vue'
     export default {
         name: "Goods",
-        components: {Left},
+        components: {Left,Right},
     }
 </script>
 
