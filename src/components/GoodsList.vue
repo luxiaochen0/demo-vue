@@ -14,7 +14,15 @@
         name: "GoodsList",
         data(){
             var _this=this;
-            this.$axios.get("json/notebook.json").then(function (response) {
+            var url="";
+            if(_this.goodsId==1){
+                url="json/notebook.json"
+            }else if(_this.goodsId==2){
+                url="json/mobile.json"
+            }else{
+                url="json/notebook.json"
+            }
+            this.$axios.get(url).then(function (response) {
                 _this.list=response.data;
             })
             return {
@@ -24,8 +32,24 @@
         props:{
             goodsId:Number
         },
-        watch:function () {
-            
+        watch:{
+            goodsId(){
+                var _this=this;
+                var url="";
+                if(_this.goodsId==1){
+                    url="json/notebook.json"
+                }else if(_this.goodsId==2){
+                    url="json/mobile.json"
+                }else{
+                    url="json/notebook.json"
+                }
+                this.$axios.get(url).then(function (response) {
+                    _this.list=response.data;
+                })
+                return {
+                    list:[]
+                }
+            }
         }
     }
 </script>

@@ -3,8 +3,11 @@
         <div v-if="kk==1">
             <GoodsList :goodsId="1"></GoodsList>
         </div>
-        <div v-if="kk==2">
+        <div v-else-if="kk==2">
             <GoodsList :goodsId="2"></GoodsList>
+        </div>
+        <div v-else>
+            <GoodsList :goodsId="0"></GoodsList>
         </div>
     </div>
 </template>
