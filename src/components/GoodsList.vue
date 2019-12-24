@@ -1,9 +1,10 @@
 <template>
     <div>
         <ul class="goodsList">
-            <li v-for="goods in list" :key="goods.id">
+            <li v-for="(goods,index) in list" :key="index">
                 <img :src="goods.img">
                 <p>{{goods.goodsName}}</p>
+                <p>{{index}}</p>
             </li>
         </ul>
     </div>
