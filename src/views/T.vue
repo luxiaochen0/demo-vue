@@ -1,7 +1,7 @@
 <template>
     <div>
-        <ul>
-            <li v-for="(goods,index) in goods_list" :key="index">{{goods.id}}--{{goods.name}}--{{index}}--{{$index}}</li>
+        <ul class="block">
+            <li v-for="(goods,index) in goods_list" :key="index" class="row">{{goods.id}}--{{goods.name}}--{{index}}--{{$index}}</li>
         </ul>
         <ul>
             <li v-for="(goods,name,index) in goods" :key="index">{{goods}}--{{name}}--{{index}}</li>
@@ -26,6 +26,11 @@
     }
 </script>
 
-<style scoped>
-
+<style scoped lang="scss">
+.block {
+    background-color: #74ef4d;
+    .row {
+        color: aqua;
+    }
+}
 </style>
