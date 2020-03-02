@@ -21,44 +21,49 @@ const routes = [
   {
     path: '/first',
     name: 'first',
-    component: () => import(/* webpackChunkName: "about" */ '../views/First.vue')
+    component: () => import(/* webpackChunkName: "First" */ '../views/First.vue')
   },
   {
     path: '/a',
     name: 'a',
-    component: () => import(/* webpackChunkName: "about" */ '../views/A.vue'),
+    component: () => import(/* webpackChunkName: "First" */ '../views/A.vue'),
     children:[
       {
         path:'/a1',
         name:'a1',
-        component: () => import(/* webpackChunkName: "about" */ '../views/A1.vue'),
+        component: () => import(/* webpackChunkName: "First" */ '../views/A1.vue'),
       }
     ]
   },
   {
     path: '/b',
     name: 'b',
-    component: () => import(/* webpackChunkName: "about" */ '../views/B.vue')
+    component: () => import(/* webpackChunkName: "First" */ '../views/B.vue')
   },
   {
     path: '/goods',
     name: 'goods',
-    component: () => import(/* webpackChunkName: "about" */ '../views/Goods.vue')
+    component: () => import(/* webpackChunkName: "goods" */ '../views/Goods.vue')
   },
   {
     path: '/t',
     name: 't',
-    component: () => import(/* webpackChunkName: "about" */ '../views/T.vue')
+    component: () => import(/* webpackChunkName: "t" */ '../views/T.vue')
   },
   {
     path: '/form',
     name: 'form',
-    component: () => import(/* webpackChunkName: "about" */ '../views/Form.vue')
+    component: () => import(/* webpackChunkName: "form" */ '../views/Form.vue')
   },
   {
     path: '/element',
     name: 'element',
-    component: () => import(/* webpackChunkName: "about" */ '../views/element/index.vue')
+    component: () => import(/* webpackChunkName: "element" */ '../views/element/index.vue')
+  },
+  {
+    path: '/vuex',
+    name: 'vuex',
+    component: () => import(/* webpackChunkName: "vuex" */ '../views/vuex/index.vue')
   }
 ]
 
