@@ -8,8 +8,8 @@ export default new Vuex.Store({
     count: 1
   },
   getters: {
-    getStateCount: state => {
-      return state.count + 1
+    getStateCount: state => { //这里使用箭头函数，如果要使用 `this` 获取局部状态，必须使用常规函数
+      return state.count+1
     }
   },
   mutations: {
